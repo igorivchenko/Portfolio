@@ -1,0 +1,111 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /*        Light theme         */
+
+  --black: #292929;
+  --white: #f0f0f0;
+  --accent-green: #00b068;
+  --light-grey: #e4e5e6;
+  --light-accent: #bcdfd1;
+  --hover-green: #009156;
+  --hover-grey: #bbbbbb;
+  --error: #e74a3b;
+
+  /*        Dark theme         */
+
+  --black-dt: #f0f0f0;
+  --white-dt: #1e2023;
+  --accent-green-dt: #14c57c;
+  --light-grey-dt: #2a2d32;
+  --light-accent-dt: #204136;
+  --hover-grey-dt: #3b3f45;
+
+  /*        Fonts         */
+
+  --font-family: 'Poppins', sans-serif;
+  --second-family: 'Impact', sans-serif;
+  --third-family: 'Montserrat', sans-serif;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+body.dark-theme {
+  --black: var(--black-dt);
+  --white: var(--white-dt);
+  --accent-green: var(--accent-green-dt);
+  --light-grey: var(--light-grey-dt);
+  --light-accent: var(--light-accent-dt);
+  --hover-grey: var(--hover-grey-dt);
+}
+
+main {
+  flex-grow: 1;
+}
+
+.section {
+  padding-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 124px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding-top: 164px;
+  }
+}
+
+.hero-title span,
+.section-title span {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    60deg,
+    var(--accent-green) 0,
+    var(--accent-green) 75%,
+    var(--light-accent) 80%,
+    var(--light-accent) 84%,
+    var(--accent-green) 90%,
+    var(--accent-green) 100%
+  );
+  background-size: 600px 100%;
+  animation: titleGlare linear infinite;
+  animation-duration: 20s;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title span,
+  .section-title span {
+    background-size: 1000px 100%;
+  }
+}
+
+@keyframes titleGlare {
+  0% {
+    background-position: -1000px 50%;
+  }
+  100% {
+    background-position: 1000px 50%;
+  }
+}
