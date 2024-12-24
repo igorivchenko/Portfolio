@@ -11,8 +11,7 @@
   height: 100vh;
   background-color: var(--white);
   overflow: auto;
-  background-image: url('../img/hero_decor_tablet2.png'),
-    url('../img/hero-mob-13.png');
+  background-image: url('../img/hero_decor_tablet2.png'), url('../img/hero-mob-13.png');
   background-repeat: no-repeat, no-repeat;
   background-position: right 80px, right 563px;
   background-size: 352px 265px, 170px 132px;
