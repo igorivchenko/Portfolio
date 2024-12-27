@@ -77,6 +77,8 @@
 .about-img {
   border-radius: 4%;
   grid-area: image;
+  width: 384px;
+  height: 448px;
 }
 
 .about-container {
@@ -143,6 +145,10 @@
   .role {
     position: relative;
     margin-top: 60px;
+  }
+
+  .role-text-item:first-child {
+    margin-bottom: 16px;
   }
 
   .about-me-background-img {

@@ -6,11 +6,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 import { createMarkup, notFound } from './reviews-markup';
 
-async function fetchReviews(params) {
+async function fetchReviews() {
   try {
-    const { data } = await axios.get(
-      'https://portfolio-js.b.goit.study/api/reviews'
-    );
+    const { data } = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
     createMarkup(data);
   } catch (error) {
     notFound();

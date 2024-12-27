@@ -25,11 +25,12 @@
   gap: 24px;
 }
 
-.swiper {
+.reviews-swiper {
   width: 320px;
+  margin-bottom: 20px;
 }
 
-.swiper-wrapper .swiper-slide,
+.reviews-list .swiper-slide,
 .not-found {
   border-radius: 16px;
   padding: 32px;
@@ -68,7 +69,9 @@
 
 .button-wrapper {
   display: flex;
+  justify-content: space-between;
   gap: 16px;
+  width: 100%;
 }
 
 .swiper-button-prev,
@@ -76,6 +79,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: static;
   width: 40px;
   height: 40px;
   padding: 6px;
@@ -94,10 +98,18 @@
   transition: 0.3s;
 }
 
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: '';
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: '';
+}
+
 .button-wrapper .swiper-button-disabled {
-  border: 1px solid var(--light-grey);
   pointer-events: none;
-  fill: var(--light-grey);
 }
 
 .not-found .not-found-text {
@@ -126,7 +138,7 @@
     margin-bottom: 60px;
   }
 
-  .swiper {
+  .reviews-swiper {
     width: 704px;
   }
 
@@ -139,6 +151,10 @@
     gap: 0;
     min-height: 224px;
     justify-content: space-between;
+  }
+
+  .button-wrapper {
+    justify-content: end;
   }
 }
 
@@ -153,7 +169,7 @@
     margin: 0 auto 80px auto;
   }
 
-  .swiper {
+  .reviews-swiper {
     width: 1216px;
   }
 

@@ -6,7 +6,7 @@ import 'swiper/css';
 // import 'swiper/css/navigation';
 
 // init Swiper:
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews-swiper', {
   modules: [Navigation, Keyboard],
   // Optional parameters
   direction: 'horizontal',

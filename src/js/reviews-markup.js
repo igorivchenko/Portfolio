@@ -1,4 +1,4 @@
-const swiperList = document.querySelector('.swiper-wrapper');
+const swiperList = document.querySelector('.reviews-list');
 
 const buttonWrapper = document.querySelector('.button-wrapper');
 

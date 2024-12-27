@@ -113,6 +113,107 @@
   margin-bottom: 0;
 }
 
+.mySwiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.my-projects-swiper-wrapper {
+  margin-bottom: 20px;
+}
+
+.swiper-slide.my-projects-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+}
+
+.my-projects-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide-active:hover article > .my-projects-card-info {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+}
+
+.swiper-slide-active:hover article > img {
+  filter: blur(2px);
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--accent-green);
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.my-projects-card {
+  height: 100%;
+}
+
+.my-projects-card-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  color: var(--black);
+  background-color: var(--light-grey);
+}
+
+.my-projects-card-info {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  padding: 10px;
+  height: 100%;
+  font-size: 14px;
+  color: var(--black);
+  background-color: var(--light-grey);
+  transform: translateY(100%);
+}
+
+.my-projects-card-info-accent {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.my-projects-card-icon {
+  width: 50px;
+  height: 50px;
+  fill: #fff0f5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: scale(1) translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.my-projects-card-icon {
+  transition: fill 0.2s ease-in-out;
+}
+
+.my-projects-card-icon:hover {
+  fill: var(--accent-green);
+}
+
+.swiper-slide-active:hover article > svg {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* TABLET */
 @media screen and (min-width: 768px) {
   .projects-head {
@@ -180,6 +281,11 @@
   .projects-list {
     gap: 80px;
     margin-bottom: 80px;
+  }
+
+  .my-projects-card-title {
+    font-size: 30px;
+    text-align: center;
   }
 
   .hide-margin {
