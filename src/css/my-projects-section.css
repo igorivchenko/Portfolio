@@ -136,21 +136,13 @@
   height: 100%;
 }
 
-.swiper-slide-active:hover article > .my-projects-card-info {
-  transition: transform 0.5s ease-in-out;
-  transform: translateY(0);
-}
-
-.swiper-slide-active:hover article > img {
-  filter: blur(2px);
-}
-
 .swiper-pagination-bullet {
   background-color: var(--accent-green);
 }
 
 .swiper-pagination {
   position: static;
+  margin-top: 16px;
 }
 
 .my-projects-card {
@@ -196,22 +188,9 @@
   left: 50%;
   z-index: 100;
   transform: scale(1) translate(-50%, -50%);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-}
-
-.my-projects-card-icon {
-  transition: fill 0.2s ease-in-out;
-}
-
-.my-projects-card-icon:hover {
-  fill: var(--accent-green);
-}
-
-.swiper-slide-active:hover article > svg {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, fill 0.2s ease-in-out;
 }
 
 /* TABLET */
@@ -290,5 +269,28 @@
 
   .hide-margin {
     margin-bottom: 0;
+  }
+
+  .swiper-slide-active:hover article > .my-projects-card-info {
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0);
+  }
+
+  .swiper-slide-active:hover article > img {
+    filter: blur(2px);
+  }
+
+  .my-projects-card-icon {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .my-projects-card-icon:hover {
+    fill: var(--accent-green);
+  }
+
+  .swiper-slide-active:hover article > svg {
+    opacity: 1;
+    visibility: visible;
   }
 }
