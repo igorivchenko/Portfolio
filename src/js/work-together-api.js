@@ -74,44 +74,34 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault(); // Запобігаємо стандартному відправленню форми
 
     const email = emailInput.value.trim();
-    const comment = messageTextarea.value.trim();
+    const message = messageTextarea.value.trim();
 
     // Валідація полів перед відправкою
     if (!validateEmail(email)) {
       emailError.textContent = 'Please enter a valid email address.';
       return;
     }
-    if (!comment) {
+    if (!message) {
       messageError.textContent = 'Message cannot be empty.';
       return;
     }
 
-    var data = { email, comment };
-    // var message = "";
-    // data = { email, message };
+    var data = { email, message };
     const JsonMessage = JSON.stringify(data);
 
     console.log(JsonMessage);
 
     try {
-      const response = await fetch(
-        'https://portfolio-js.b.goit.study/api/requests',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JsonMessage,
-        }
-      );
+      const response = await fetch('https://67706f4e2ffbd37a63cce6a1.mockapi.io/requests', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JsonMessage,
+      });
 
       if (response.ok) {
-        const responseData = await response.json();
-        //openModal("Success", responseData.message || "Message sent successfully!");
-        openModal(
-          modalTitle.textContent,
-          modalMessage.textContent || 'Message sent successfully!'
-        );
+        openModal(modalTitle.textContent, modalMessage.textContent || 'Message sent successfully!');
         form.reset(); // Очищення форми
         checkmark.style.display = 'none';
       } else {
