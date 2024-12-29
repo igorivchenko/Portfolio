@@ -162,11 +162,12 @@
 .my-projects-card-info {
   position: absolute;
   top: 60%;
-  left: 0;
+  left: -2px;
   display: flex;
   flex-direction: column;
   row-gap: 4px;
   padding: 10px;
+  width: 505px;
   height: 100%;
   font-size: 14px;
   color: var(--black);
