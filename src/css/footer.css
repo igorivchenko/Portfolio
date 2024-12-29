@@ -82,7 +82,7 @@ footer {
   fill: red;
 }
 
-@media screen and (min-width: 767.99px) {
+@media screen and (min-width: 768px) {
   .footer-all {
     width: 768px;
   }
@@ -117,6 +117,7 @@ footer {
 
   .footer-all-box {
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
   }
 }

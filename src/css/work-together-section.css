@@ -343,7 +343,7 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
+@media (min-width: 360px) and (max-width: 768px) {
   .work-together {
     padding-block: 80px;
     flex-direction: column;
